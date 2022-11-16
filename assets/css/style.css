@@ -1,0 +1,53 @@
+h1 {
+    font-size: 70px;
+}
+
+.stats{
+    background-color: bisque;
+    border-bottom: 1px solid black;
+}
+
+.buttons {
+    text-align: center;
+}
+
+
+button {
+    text-align: center;
+    font-size: 18px;
+    padding: 12px;
+    width: 150px;
+    color: lightgoldenrodyellow;
+    background-color: goldenrod;
+    border: 1px solid black;
+    margin-top: 35px;
+    margin: 5px;
+    margin-left: 5px;
+}
+
+button:hover {
+    background-color: goldenrod;
+}
+
+body {
+    background-color: blanchedalmond;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.highbutton {
+    font-size: 14px;
+    margin-top: 5px;
+    margin-left: 0;
+}
+
+textarea {
+    height: 35px;
+    resize: none;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cw {
+    font-size: 40px;
+}
