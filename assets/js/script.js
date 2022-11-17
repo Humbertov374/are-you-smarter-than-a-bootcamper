@@ -50,3 +50,27 @@ function countdown() {
 }
 
 
+//Adds remaining time to the score.
+function timepoints() {
+    score += seconds;
+}
+
+//Correct answer response.
+function correct() {
+    correctsound.play();
+}
+
+//Correct text display.
+function correctcw() {
+    var yesInterval = setInterval(function() {
+    cwtime --;
+    cw.setAttribute("style", "color: rgb(112, 177, 112)")
+    cw.textContent = "Correct!";
+        if (cwtime <= 0) {
+            clearInterval (yesInterval);
+            cw.textContent = "";
+            cwtime = 2;
+        }
+    }, 350);
+}
+
