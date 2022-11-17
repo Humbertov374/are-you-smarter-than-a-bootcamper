@@ -50,17 +50,17 @@ function countdown() {
 }
 
 
-//Adds remaining time to the score.
+//remaining time
 function timepoints() {
     score += seconds;
 }
 
-//Correct answer response.
+//Correct answer
 function correct() {
     correctsound.play();
 }
 
-//Correct text display.
+//Correct text
 function correctcw() {
     var yesInterval = setInterval(function() {
     cwtime --;
@@ -74,3 +74,23 @@ function correctcw() {
     }, 350);
 }
 
+
+//Wrong answer response.
+function wrong() {
+    wrongsound.play();
+    seconds -=15;
+}
+
+//Wrong text display.
+function wrongcw() {
+    var noInterval = setInterval(function() {
+    cwtime --;
+    cw.setAttribute("style", "color:rgb(185, 80, 80)");
+    cw.textContent = "Wrong!";
+        if (cwtime <= 0) {
+            clearInterval (noInterval);
+            cw.textContent = "";
+            cwtime = 2;
+        }
+    }, 350);
+}
