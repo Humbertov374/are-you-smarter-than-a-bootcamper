@@ -544,3 +544,24 @@ function question10() {
         postquiz();
     });
 }
+
+//Post-quiz
+function postquiz() {
+    timepoints();
+    seconds = 0; 
+    a1.remove();
+    a2.remove();
+    a3.remove();
+    a4.remove();
+    highscore.style.visibility = "visible";
+    question.textContent = "Quiz Complete! Your score is " + score + ". Please enter your initials below."
+    
+    a1 = document.createElement("BUTTON");
+    a1.innerHTML = "Submit";
+    document.body.children[4].appendChild(a1);
+    a1.addEventListener("click", function () {
+        localStorage.setItem("user", highscore.value);
+        localStorage.setItem("score", score);
+        scorepage();
+    });
+}
