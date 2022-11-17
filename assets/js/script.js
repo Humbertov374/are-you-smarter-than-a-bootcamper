@@ -1,7 +1,7 @@
 var score = 0;
 var banner = document.querySelector(".banner");
 var question = document.querySelector(".question");
-var highscore = document.querySelector(".highscore");
+var highscore = document.querySelector(".highscore")
 var buttonsrow = document.querySelector(".buttons");
 var timer = document.querySelector(".timer");
 var timerInterval;
@@ -15,52 +15,51 @@ var a2;
 var a3;
 var a4;
 
-//layout
-function opening() {
-  highscore.style.visibility = " hidden";
-  a1 = document.createElement("button");
-  a1.innerHTML = "Start Quiz!";
-  document.body.children[4].appendChild(a1);
-  a1.addEventListener("click", function () {
-    question1();
+//Opening layout.
+function quizopening() {
+    highscore.style.visibility = "hidden";
 
-  });
-  a2 = document.createElement("button");
-  a2.innerHTML = "Scores!";
-  document.body.children[4].appendChild(a2);
-  a2.addEventListener("click", function () {
-    scorepage();
-  });
+    a1 = document.createElement("BUTTON");
+    a1.innerHTML = "Start Quiz";
+    document.body.children[4].appendChild(a1);
+    a1.addEventListener("click", function () {
+        question1();
+    });
+
+    a2 = document.createElement("BUTTON");
+    a2.innerHTML = "View Scores";
+    document.body.children[4].appendChild(a2);
+    a2.addEventListener("click", function () {
+        scorepage();
+    });
 }
-quizOpening();
+quizopening();
 
-// Timer Animation
+//Timer.
 function countdown() {
     timerInterval = setInterval(function() {
-        seconds --;
-        timer.textContent = "Time Left!: " + seconds;
-        if(seconds<= 0) {
+    seconds --;
+    timer.textContent = "Time left: " + seconds;
+        if (seconds <= 0) {
             clearInterval (timerInterval);
             seconds = 0;
-            timer.timerContent = "Timer Left!: 0"
+            timer.textContent = "Time left: 0"
             postquiz();
         }
-
-    },1000)
+    }, 1000);
 }
 
-
-//remaining time
+//Adds remaining time to the score.
 function timepoints() {
     score += seconds;
 }
 
-//Correct answer
+//Correct answer response.
 function correct() {
     correctsound.play();
 }
 
-//Correct text
+//Correct text display.
 function correctcw() {
     var yesInterval = setInterval(function() {
     cwtime --;
@@ -74,14 +73,13 @@ function correctcw() {
     }, 350);
 }
 
-
-//Wrong response
+//Wrong answer response.
 function wrong() {
     wrongsound.play();
     seconds -=15;
 }
 
-//Wrong text
+//Wrong text display.
 function wrongcw() {
     var noInterval = setInterval(function() {
     cwtime --;
@@ -326,10 +324,10 @@ function question6() {
     a2.remove();
     a3.remove();
     a4.remove();
-    question.textContent = "The C in CSS stands for: ";
+    question.textContent = "Which of the following will write the message “Hello DataFlair!” in an alert box? ";
        
     a1 = document.createElement("BUTTON");
-    a1.innerHTML = "Cursive";
+    a1.innerHTML = "msgAlert(“Hello DataFlair!”);";
     document.body.children[4].appendChild(a1);
     a1.addEventListener("click", function () {
         wrongcw();
@@ -338,7 +336,7 @@ function question6() {
     });
  
     a2 = document.createElement("BUTTON");
-    a2.innerHTML = "Coded";
+    a2.innerHTML = "alert(Hello DataFlair!);";
     document.body.children[4].appendChild(a2);
     a2.addEventListener("click", function () {
         wrongcw();
@@ -347,7 +345,7 @@ function question6() {
     });
 
     a3 = document.createElement("BUTTON");
-    a3.innerHTML = "Cascading";
+    a3.innerHTML = "alert(“Hello DataFlair!”);";
     document.body.children[4].appendChild(a3);
     a3.addEventListener("click", function () {
         correctcw();
@@ -356,7 +354,7 @@ function question6() {
     });
 
     a4 = document.createElement("BUTTON");
-    a4.innerHTML = "Coding";
+    a4.innerHTML = "alertBox(“Hello DataFlair!”);";
     document.body.children[4].appendChild(a4);
     a4.addEventListener("click", function () {
         wrongcw();
@@ -416,10 +414,10 @@ function question8() {
     a2.remove();
     a3.remove();
     a4.remove();
-    question.textContent = "If . represents class, # represents ___";
+    question.textContent = "JavaScript is a ___ -side programming language.";
        
     a1 = document.createElement("BUTTON");
-    a1.innerHTML = "Number";
+    a1.innerHTML = "Client";
     document.body.children[4].appendChild(a1);
     a1.addEventListener("click", function () {
         wrongcw();
@@ -428,7 +426,7 @@ function question8() {
     });
  
     a2 = document.createElement("BUTTON");
-    a2.innerHTML = "Id";
+    a2.innerHTML = "Both";
     document.body.children[4].appendChild(a2);
     a2.addEventListener("click", function () {
         correctcw();
@@ -437,7 +435,7 @@ function question8() {
     });
 
     a3 = document.createElement("BUTTON");
-    a3.innerHTML = "Pound";
+    a3.innerHTML = "Server";
     document.body.children[4].appendChild(a3);
     a3.addEventListener("click", function () {
         wrongcw();
@@ -446,7 +444,7 @@ function question8() {
     });
 
     a4 = document.createElement("BUTTON");
-    a4.innerHTML = "Hash";
+    a4.innerHTML = "None";
     document.body.children[4].appendChild(a4);
     a4.addEventListener("click", function () {
         wrongcw();
@@ -506,28 +504,10 @@ function question10() {
     a2.remove();
     a3.remove();
     a4.remove();
-    question.textContent = "Inside which HTML element (< >) do we put the JavaScript?";
+    question.textContent = "If you type the following code in the console window, what result will you get? 3>2>1 === false;";
        
-    a1 = document.createElement("BUTTON");
-    a1.innerHTML = "js";
-    document.body.children[4].appendChild(a1);
-    a1.addEventListener("click", function () {
-        wrong();
-        wrongcw();
-        postquiz();
-    });
- 
-    a2 = document.createElement("BUTTON");
-    a2.innerHTML = "scripting";
-    document.body.children[4].appendChild(a2);
-    a2.addEventListener("click", function () {
-        wrong();
-        wrongcw();
-        postquiz(); 
-    });
-
     a3 = document.createElement("BUTTON");
-    a3.innerHTML = "script";
+    a3.innerHTML = "True";
     document.body.children[4].appendChild(a3);
     a3.addEventListener("click", function () {
         correctcw();
@@ -536,7 +516,7 @@ function question10() {
     });
 
     a4 = document.createElement("BUTTON");
-    a4.innerHTML = "javascript";
+    a4.innerHTML = "False";
     document.body.children[4].appendChild(a4);
     a4.addEventListener("click", function () {
         wrong();
@@ -563,5 +543,31 @@ function postquiz() {
         localStorage.setItem("user", highscore.value);
         localStorage.setItem("score", score);
         scorepage();
+    });
+}
+
+//High score page layout.
+function scorepage() {
+    clearInterval (timerInterval);
+    a1.remove();
+    a2.remove();
+    highscore.style.visibility = "hidden";
+    banner.textContent = "High Scores"
+    
+    question.textContent = localStorage.getItem("user") + ": " + localStorage.getItem("score");
+    
+    a1 = document.createElement("BUTTON");
+    a1.innerHTML = "Restart Quiz";
+    document.body.children[4].appendChild(a1);
+    a1.addEventListener("click", function () {
+        location.reload();
+    });
+
+    a2 = document.createElement("BUTTON");
+    a2.innerHTML = "Clear Scores";
+    document.body.children[4].appendChild(a2);
+    a2.addEventListener("click", function () {
+        localStorage.clear();
+        question.textContent = "";
     });
 }
