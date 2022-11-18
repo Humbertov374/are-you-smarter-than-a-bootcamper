@@ -1,53 +1,58 @@
-h1 {
-    font-size: 70px;
+body {
+    background-color: pink;
+    font-family: 'Sono', sans-serif;
 }
 
-.stats{
-    background-color: bisque;
+h1 {
+    font-size: 50px;
+}
+
+.stats {
+    background-color: paleturquoise;
     border-bottom: 1px solid black;
+}
+
+.question {
+    text-align: center;
+    border: 1px solid paleturquoise;
+    background-color: rgb(191, 255, 255);
 }
 
 .buttons {
     text-align: center;
 }
 
-
 button {
     text-align: center;
     font-size: 18px;
-    padding: 12px;
+    padding: 10px;
     width: 150px;
-    color: lightgoldenrodyellow;
-    background-color: goldenrod;
+    color: rgb(0, 0, 0);
+    background-color: paleturquoise;
     border: 1px solid black;
-    margin-top: 35px;
-    margin: 5px;
+    margin-top: 30px;
+    margin-right: 5px;
     margin-left: 5px;
 }
 
 button:hover {
-    background-color: goldenrod;
-}
-
-body {
-    background-color: blanchedalmond;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(109, 148, 148)
 }
 
 .highbutton {
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 2px;
     margin-left: 0;
 }
 
 textarea {
-    height: 35px;
+    height: 30px;
+    margin-top: 10px;
     resize: none;
-    margin-top: 12px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .cw {
-    font-size: 40px;
+    font-size: 32px;
 }
