@@ -6,4 +6,4 @@ Howdy ya'll! Welcome to Are You Smarter Than A Coder? The rules are quite simple
 
 (click on the picture below)
 
-<a href="https://humbertov374.github.io/are-you-smarter-than-a-bootcamper/"><img src="./assets/pics/areyousmart.png"
+<a href="https://humbertov374.github.io/are-you-smarter-than-a-bootcamper/"><img src="./assets/pics/Quiz.jpeg"
